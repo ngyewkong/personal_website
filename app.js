@@ -20,15 +20,17 @@ function switchPages() {
 function clickNewActive() {
     document.querySelector('.active-btn').classList.remove('active-btn');
     this.classList.add('active-btn');
+    // remove active class when event button click is registered
+    document.querySelector('.active').classList.remove('active');
 }
 
 function showActivePage(event) {
-    // remove active class when event click is registered
-    document.querySelector('.active').classList.remove('active');
+    
 
     // check if event target dataset.id == section.id
     // add active to the section.id that match
     sections.forEach(section => {
+        
         if (event.target.dataset.id == section.id) {
             section.classList.add('active');
             console.log(event.target.dataset.id);
