@@ -13,17 +13,18 @@
 
 </head>
 <body class="main-content">
-    <header class="section section1 header active"></header>
+    <header class="section section1 header active" id="home"></header>
     <main>
-        <section class="section section2 about"></section>
-        <section class="section section3 portfolio"></section>
-        <section class="section section4 experience"></section>
-        <section class="section section5 contact"></section>
+        <section class="section section2 about" id="about"></section>
+        <section class="section section3 portfolio" id="portfolio"></section>
+        <section class="section section4 experience" id="experience"></section>
+        <section class="section section5 contact" id="contact"></section>
     </main>
 
-    <!-- buttons to handle to toggle between sections -->
+    <!-- buttons to handle to toggle between sections
+    data-id is going to find an id with the same string -->
     <div class="controls">
-        <div class="control control-1 active-btn" data-id="header">
+        <div class="control control-1 active-btn" data-id="home">
             <i class="fas fa-home"></i>
         </div>
         <div class="control control-2" data-id="about">

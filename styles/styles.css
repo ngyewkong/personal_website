@@ -72,30 +72,39 @@ section {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: red;
 }
 
 .section2 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: royalblue;
 }
 
 .section3 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: rosybrown;
 }
 
 .section4 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: rebeccapurple;
 }
 
 .section5 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: aquamarine;
+}
+
+.active {
+  display: block;
 }
 
 /* css for controls fixing it to not move and z-index to 10 to make sure
