@@ -72,7 +72,6 @@ section {
 .section2 {
     display: none;
     transform: translateY(0) scale(1);
-    background-color: royalblue;
 }
 
 .section3 {
@@ -159,10 +158,13 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
         justify-content: center;
         align-items: center;
         margin: 1rem;
+        pointer-events: none;
     }
     &:hover {
         width: 100px;
         transition: width .7s;
+        border: 1px solid var(--color-white);
+        box-shadow: 1px 2px 15px rgba(255, 255, 255, 1);
         i {
             opacity: 0;
             display: none;
@@ -175,13 +177,6 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
         }
     }
 }
-
-
-
-
-
-
-
 
 /* header styling */
 .header-content {
@@ -245,8 +240,75 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
     }
 }
 
+/* About Styling */
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+    .right-about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        .about-item {
+            border: 1px solid var(--color-gray-5);
+            border-radius: 5px;
+            transition: all .4s ease-in-out;
+            box-shadow: 1px 2px 15px rgba(0, 0, 0, .1);
+            &:hover {
+                cursor: default;
+                transform: translateY(-5px);
+                border-radius: 1px solid var(--color-secondary);
+                box-shadow: 1px 2px 15px rgba(255, 255, 255, 1);
+            }
+            .abt-txt {
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                .large-txt {
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: var(--color-secondary)
+                }
+                .small-txt {
+                    padding-left: 3rem;
+                    position: relative;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    color: var(--color-gray-1);
+                    letter-spacing: 2px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 15px;
+                        left: 0;
+                        width: 2rem;
+                        height: 2px;
+                        background-color: var(--color-gray-5);
+                    }
+                }
+            }
+        }
+    }
+    .left-about {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-right: 5rem;
+        h4 {
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+        p {
+            line-height: 2rem;
+            font-size: .9rem;
+            padding: .5rem;
+            color: var(--color-gray-1);
+        }
+    }
+}
+
 /* download button styling */
-.download-btn-container {
+.btn-container {
     display: flex;
     align-self: flex-start;
 }
@@ -288,6 +350,31 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
             background-color: var(--color-secondary);
             transform: translateX(0);
             transition: all .4s ease-in-out;
+        }
+    }
+}
+
+/* section styling */
+.main-title {
+    text-align: center;
+    h2 {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 700;
+        span {
+            color: var(--color-secondary);
+        }
+        .bg-txt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: var(--color-gray-5);
+            transition: all .4s ease-in-out;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            font-weight: 800;
+            font-size: 6.3rem;
         }
     }
 }

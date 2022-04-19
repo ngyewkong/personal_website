@@ -78,7 +78,6 @@ section {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
-  background-color: royalblue;
 }
 
 .section3 {
@@ -208,12 +207,16 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
       -ms-flex-align: center;
           align-items: center;
   margin: 1rem;
+  pointer-events: none;
 }
 
 .control:hover {
   width: 100px;
   -webkit-transition: width .7s;
   transition: width .7s;
+  border: 1px solid var(--color-white);
+  -webkit-box-shadow: 1px 2px 15px white;
+          box-shadow: 1px 2px 15px white;
 }
 
 .control:hover i {
@@ -319,8 +322,100 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   line-height: 2rem;
 }
 
+/* About Styling */
+.about-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+.about-container .right-about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.about-container .right-about .about-item {
+  border: 1px solid var(--color-gray-5);
+  border-radius: 5px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-container .right-about .about-item:hover {
+  cursor: default;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  border-radius: 1px solid var(--color-secondary);
+  -webkit-box-shadow: 1px 2px 15px white;
+          box-shadow: 1px 2px 15px white;
+}
+
+.about-container .right-about .about-item .abt-txt {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-container .right-about .about-item .abt-txt .large-txt {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.about-container .right-about .about-item .abt-txt .small-txt {
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-gray-1);
+  letter-spacing: 2px;
+}
+
+.about-container .right-about .about-item .abt-txt .small-txt::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-gray-5);
+}
+
+.about-container .left-about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding-right: 5rem;
+}
+
+.about-container .left-about h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.about-container .left-about p {
+  line-height: 2rem;
+  font-size: .9rem;
+  padding: .5rem;
+  color: var(--color-gray-1);
+}
+
 /* download button styling */
-.download-btn-container {
+.btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,5 +479,35 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
           transform: translateX(0);
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+}
+
+/* section styling */
+.main-title {
+  text-align: center;
+}
+
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.main-title h2 span {
+  color: var(--color-secondary);
+}
+
+.main-title h2 .bg-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-gray-5);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 6.3rem;
 }
 /*# sourceMappingURL=styles.css.map */
