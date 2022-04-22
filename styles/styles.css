@@ -878,11 +878,24 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   font-size: 1.3rem;
 }
 
+.contact-content-container .left-contact .social-icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[2];
+      grid-template-columns: repeat(2, 50px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .contact-content-container .left-contact .social-icon {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 2rem;
 }
 
 .contact-content-container .left-contact .social-icon a {
@@ -901,7 +914,7 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin: 0 0.4rem;
+  margin: 0;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
