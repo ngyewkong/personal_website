@@ -755,3 +755,7 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
     }
   }
 }
+
+// handle different screen sizes
+// media queries must be at the end
+@import "./media";
