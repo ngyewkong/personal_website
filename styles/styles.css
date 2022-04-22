@@ -24,6 +24,23 @@
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* light mode variables */
+.light-mode {
+  --color-primary: #ffffff;
+  --color-secondary: #f7b100;
+  --color-white: #454e56;
+  --color-black: #000;
+  --color-gray-0: #faf1e6;
+  --color-gray-1: #2a2e35;
+  --color-gray-2: #b2becd;
+  --color-gray-3: #fbf6f0;
+  --color-gray-4: #eff8ff;
+  --color-gray-5: #eff8ff;
+  --color-gray-6: #fcf8ec;
+  --br-sm-2: 14px;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* css variables to toggle light/dark */
 body {
   background-color: var(--color-primary);
@@ -229,6 +246,42 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
+}
+
+/* light/dark theme toggle styling */
+.theme-btn {
+  top: 5%;
+  right: 2%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  cursor: pointer;
+  background-color: var(--color-gray-4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.01s ease-in-out;
+  transition: all 0.01s ease-in-out;
+}
+
+.theme-btn:active {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.theme-btn i {
+  font-size: 1.2rem;
+  color: var(--color-gray-2);
+  pointer-events: none;
 }
 
 /* header styling */
