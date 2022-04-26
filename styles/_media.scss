@@ -1,10 +1,20 @@
-@media screen and (max-width: 600px) {
+// mobile media queries
+@media screen and (max-width: 768px) {
   header {
     padding: 0;
   }
   header .right-header {
     padding: 0 !important;
     overflow: visible;
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    .btn-container {
+      align-self: center;
+    }
   }
 
   .header-content {
@@ -62,12 +72,25 @@
     padding-bottom: 6rem;
   }
 
+  .timeline {
+    padding-bottom: 6rem;
+    .desc {
+      width: 0.6;
+      h5 {
+        text-align: left;
+      }
+    }
+  }
+
   .contact-content-container {
     flex-direction: column;
     .right-contact {
       margin-left: 0;
       margin-top: 2.5rem;
       padding-bottom: 6rem;
+      .submit-btn {
+        justify-content: center;
+      }
     }
   }
 
@@ -87,7 +110,7 @@
     h2 {
       font-size: 2rem;
       span {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
     }
   }
@@ -117,7 +140,21 @@
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 769px) {
+  .about-container {
+    padding-right: 50px;
+    margin: 0 2%;
+    .right-about {
+      grid-template-columns: 1fr;
+      .large-txt {
+        font-size: 2rem !important;
+      }
+      .small-txt {
+        font-size: 1rem !important;
+      }
+    }
+  }
+
   .timeline {
     width: 660px;
     margin: 0 auto;
@@ -205,9 +242,27 @@
   .direction-r .desc {
     margin: 1em 0 0 0.75em;
   }
+
+  .portfolios {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 3rem;
+  }
+
+  header {
+    padding: 0 !important;
+  }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 1080px) {
+  .right-header {
+    padding: 0;
+  }
+  .about-container {
+    padding: 2%;
+    .right-about {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
   .timeline {
     width: 800px;
     margin: 0 auto;
@@ -226,5 +281,10 @@
     width: 380px;
     float: right;
     text-align: left;
+  }
+
+  .portfolios {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 3rem;
   }
 }
