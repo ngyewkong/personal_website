@@ -210,6 +210,10 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   background-color: var(--color-secondary);
 }
 
+.theme-btn:active i {
+  color: var(--color-white);
+}
+
 .theme-btn i {
   font-size: 1.2rem;
   color: var(--color-gray-2);

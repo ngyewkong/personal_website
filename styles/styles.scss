@@ -164,6 +164,9 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   transition: all 0.01s ease-in-out;
   &:active {
     background-color: var(--color-secondary);
+    i {
+      color: var(--color-white);
+    }
   }
   i {
     font-size: 1.2rem;
