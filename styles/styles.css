@@ -1204,6 +1204,7 @@ Timeline Styling */
   .about-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    padding: 0 !important;
   }
   .about-container .right-about {
     -ms-grid-columns: 1fr;
@@ -1245,6 +1246,9 @@ Timeline Styling */
     margin-left: 0;
     margin-top: 2.5rem;
     padding-bottom: 6rem;
+  }
+  .contact-content-container .right-contact .input-control {
+    margin-right: 0;
   }
   .contact-content-container .right-contact .submit-btn {
     -webkit-box-pack: center;
