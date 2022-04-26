@@ -1197,7 +1197,9 @@ Timeline Styling */
   .controls .theme-btn {
     width: 50px !important;
     height: 50px !important;
-    margin: 1rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 3rem;
   }
   .controls .control {
     margin: 1rem 0.3rem;
