@@ -207,8 +207,7 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
 }
 
 .theme-btn:active {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  background-color: var(--color-secondary);
 }
 
 .theme-btn i {

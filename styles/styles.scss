@@ -163,7 +163,7 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.01s ease-in-out;
   &:active {
-    transform: translateY(-5px);
+    background-color: var(--color-secondary);
   }
   i {
     font-size: 1.2rem;
