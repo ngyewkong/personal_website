@@ -1195,8 +1195,8 @@ Timeline Styling */
     background-color: var(--color-gray-5);
   }
   .controls .theme-btn {
-    width: 50px;
-    height: 50px;
+    width: 50px !important;
+    height: 50px !important;
     margin: 1rem 2rem;
   }
   .controls .control {
