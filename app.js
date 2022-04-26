@@ -43,4 +43,9 @@ function showActivePage(event) {
   });
 }
 
+// handle submit form
+function submitForm() {
+  document.getElementById("contact-form").submit();
+}
+
 switchPages();
