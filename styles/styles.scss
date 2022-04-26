@@ -149,11 +149,10 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
 }
 /* light/dark theme toggle styling */
 .theme-btn {
-  top: 5%;
-  right: 2%;
+  padding: 1rem;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 50px;
   margin: 3rem 0.5rem;
   cursor: pointer;
   background-color: var(--color-gray-4);
