@@ -7,12 +7,6 @@
     overflow: visible;
   }
 
-  .theme-btn {
-    width: 50px;
-    height: 50px;
-    margin: 1rem 3rem;
-  }
-
   .header-content {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
@@ -34,9 +28,16 @@
     flex-direction: row;
     justify-content: center;
     left: 50%;
+    // rotate the orientation of the buttons
     transform: translateX(-50%);
     width: 100%;
     background-color: var(--color-gray-5);
+
+    .theme-btn {
+      width: 50px;
+      height: 50px;
+      margin: 1rem 2rem;
+    }
     .control {
       margin: 1rem 0.3rem;
     }
