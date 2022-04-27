@@ -25,16 +25,16 @@
 
 /* light mode variables */
 .light-mode {
-  --color-primary: #ffffff;
-  --color-secondary: #f7b100;
-  --color-white: #454e56;
+  --color-primary: #ebe4d8;
+  --color-secondary: #f9c03d;
+  --color-white: #0f375a;
   --color-black: #000;
   --color-gray-0: #faf1e6;
   --color-gray-1: #2a2e35;
   --color-gray-2: #b2becd;
   --color-gray-3: #fbf6f0;
   --color-gray-4: #eff8ff;
-  --color-gray-5: #eff8ff;
+  --color-gray-5: #eff3f7;
   --color-gray-6: #fcf8ec;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
@@ -760,20 +760,6 @@ Timeline Styling */
   border-bottom-color: var(--color-white);
   border-width: 8px;
   pointer-events: none;
-}
-
-.direction-l .flag {
-  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15),
-    0 0 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-}
-
-.direction-r .flag {
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15),
-    0 0 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 .time-wrapper {
