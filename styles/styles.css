@@ -441,7 +441,7 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   left: 0;
   width: 2rem;
   height: 2px;
-  background-color: var(--color-gray-5);
+  background-color: var(--color-gray-2);
 }
 
 .about-container .left-about {
@@ -1205,11 +1205,28 @@ Timeline Styling */
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding: 0 !important;
+    margin-bottom: 4rem;
   }
   .about-container .right-about {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding-top: 2.5rem;
+  }
+  .about-container .right-about .about-item {
+    padding: auto 4rem;
+  }
+  .about-container .right-about .abt-txt {
+    width: 0.6;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .about-container .right-about .abt-txt .small-txt {
+    padding-left: 0 !important;
+  }
+  .about-container .right-about .abt-txt .small-txt::before {
+    content: none !important;
   }
   .about-container .left-about {
     padding-right: 0;
@@ -1221,7 +1238,6 @@ Timeline Styling */
     font-weight: 600;
   }
   .about-container .left-about p {
-    padding-left: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
