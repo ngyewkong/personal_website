@@ -959,6 +959,9 @@ Timeline Styling */
   .timeline .desc h5 {
     text-align: left;
   }
+  .timeline .desc h6 {
+    text-align: left;
+  }
   .contact-content-container {
     flex-direction: column;
   }
