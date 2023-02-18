@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   list-style: none;
 }
 
@@ -47,7 +46,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
@@ -77,9 +75,7 @@ section {
 
 /* default section is off screen */
 .section {
-  -webkit-transform: translateY(-100%) scale(0);
-          transform: translateY(-100%) scale(0);
-  -webkit-transition: all 0.4s ease-in-out;
+  transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
 }
@@ -87,61 +83,41 @@ section {
 /* display none as we want the section to appear only on click */
 .section1 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .section2 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .section3 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .section4 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .section5 {
   display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 /* active to control the section to appear on screen 
 scaleY to only scale in y-direction when teh animation runs */
 .active {
   display: block;
-  -webkit-animation: scaleAnimation 1s ease-in-out;
-          animation: scaleAnimation 1s ease-in-out;
+  animation: scaleAnimation 1s ease-in-out;
 }
-
-@-webkit-keyframes scaleAnimation {
-  0% {
-    -webkit-transform: translateY(-100%) scaleY(0);
-            transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    -webkit-transform: translateY(0) scaleY(1);
-            transform: translateY(0) scaleY(1);
-  }
-}
-
 @keyframes scaleAnimation {
   0% {
-    -webkit-transform: translateY(-100%) scaleY(0);
-            transform: translateY(-100%) scaleY(0);
+    transform: translateY(-100%) scaleY(0);
   }
   100% {
-    -webkit-transform: translateY(0) scaleY(1);
-            transform: translateY(0) scaleY(1);
+    transform: translateY(0) scaleY(1);
   }
 }
 
@@ -154,29 +130,16 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   margin: 0;
   top: 50%;
   right: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
 }
-
 .controls .active-btn {
   background-color: var(--color-secondary);
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
 .controls .active-btn i {
   color: var(--color-white);
 }
@@ -190,39 +153,26 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   margin: 3rem 0.5rem;
   cursor: pointer;
   background-color: var(--color-gray-4);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.01s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.01s ease-in-out;
 }
-
 .theme-btn:active {
   background-color: var(--color-secondary);
 }
-
 .theme-btn:active i {
   color: var(--color-white);
 }
-
 .theme-btn i {
   font-size: 1.2rem;
   color: var(--color-gray-2);
   pointer-events: none;
 }
-
 .theme-btn:hover {
   border: 1px solid var(--color-white);
-  -webkit-box-shadow: 1px 2px 15px var(--color-white);
-          box-shadow: 1px 2px 15px var(--color-white);
+  box-shadow: 1px 2px 15px var(--color-white);
 }
 
 .control {
@@ -232,89 +182,59 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 0.5rem 0;
-  -webkit-box-shadow: var(--box-shadow-1);
-          box-shadow: var(--box-shadow-1);
+  box-shadow: var(--box-shadow-1);
 }
-
 .control i {
   font-size: 1.2rem;
   color: var(--color-gray-2);
   pointer-events: none;
   opacity: 1;
-  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-
 .control .expand-btn-txt {
   display: none;
   width: 100%;
   font-size: 0.75rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
   pointer-events: none;
 }
-
 .control:hover {
   width: 6rem;
-  -webkit-transition: width 0.7s;
   transition: width 0.7s;
   border: 1px solid var(--color-white);
-  -webkit-box-shadow: 1px 2px 15px var(--color-white);
-          box-shadow: 1px 2px 15px var(--color-white);
+  box-shadow: 1px 2px 15px var(--color-white);
 }
-
 .control:hover i {
   opacity: 0;
   display: none;
-  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-
 .control:hover .expand-btn-txt {
   display: block;
   opacity: 1;
-  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
 /* header styling */
 .header-content {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
 }
-
 .header-content .left-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
   /* z-index -1 to make the shape behind the profile photo
-        clip path is used to generate a clipped custom shape */
+      clip path is used to generate a clipped custom shape */
 }
-
 .header-content .left-header .h-shape {
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   width: 65%;
   height: 100%;
@@ -326,17 +246,14 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   -webkit-clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
           clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
-
 .header-content .left-header .photo {
   border-radius: var(--br-sm-2);
   height: 90%;
   width: 68%;
   margin-left: 4rem;
   background-color: var(--color-black);
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
 .header-content .left-header .photo img {
   width: 100%;
   height: 100%;
@@ -344,29 +261,18 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .header-content .right-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   padding-right: 3rem;
 }
-
 .header-content .right-header .name {
   font-size: 3rem;
 }
-
 .header-content .right-header .name span {
   color: var(--color-secondary);
 }
-
 .header-content .right-header p {
   margin: 1.5rem 0;
   line-height: 2rem;
@@ -374,57 +280,38 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
 
 /* About Styling */
 .about-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding: 3.5rem 3rem 5rem 3rem;
   padding-bottom: 5rem;
 }
-
 .about-container .right-about {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-
 .about-container .right-about .about-item {
   border: 1px solid var(--color-gray-5);
   border-radius: 5px;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  -webkit-box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 }
-
 .about-container .right-about .about-item:hover {
   cursor: default;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
   border-radius: 1px solid var(--color-secondary);
-  -webkit-box-shadow: 1px 2px 15px var(--color-white);
-          box-shadow: 1px 2px 15px var(--color-white);
+  box-shadow: 1px 2px 15px var(--color-white);
 }
-
 .about-container .right-about .about-item .abt-txt {
   padding: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .about-container .right-about .about-item .abt-txt .large-txt {
   font-size: 3rem;
   font-weight: 700;
   color: var(--color-secondary);
 }
-
 .about-container .right-about .about-item .abt-txt .small-txt {
   padding-left: 3rem;
   position: relative;
@@ -433,7 +320,6 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   color: var(--color-gray-1);
   letter-spacing: 2px;
 }
-
 .about-container .right-about .about-item .abt-txt .small-txt::before {
   content: "";
   position: absolute;
@@ -443,20 +329,15 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   height: 2px;
   background-color: var(--color-gray-2);
 }
-
 .about-container .left-about {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   padding-right: 5rem;
 }
-
 .about-container .left-about h4 {
   font-size: 2rem;
   text-transform: uppercase;
 }
-
 .about-container .left-about p {
   line-height: 2rem;
   font-size: 0.9rem;
@@ -467,43 +348,26 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
 .about-stats {
   padding-bottom: 4rem;
 }
-
 .about-stats .progress-bars {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-
 .about-stats .progress-bars .progressbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .about-stats .progress-bars .progressbar .prog-title {
   text-transform: uppercase;
   font-weight: 500;
 }
-
 .about-stats .progress-bars .progressbar .prog-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .prog-text {
   color: var(--color-gray-2);
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress {
   width: 100%;
   height: 0.45rem;
@@ -512,66 +376,52 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   position: relative;
   /* handles the colouring of the progress bar */
   /* handles the customisation of progress bar 
-          by targeting the class tag for the skills */
+  by targeting the class tag for the skills */
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress span {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   background-color: var(--color-secondary);
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   width: 60%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .html {
   width: 90%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .css {
   width: 85%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .js {
   width: 75%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .react {
   width: 60%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .node {
   width: 70%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .python {
   width: 85%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .tensorflow {
   width: 70%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .keras {
   width: 70%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .sklearn {
   width: 85%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .pandas {
   width: 90%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .java {
-  width: 60%;
+  width: 80%;
 }
-
 .about-stats .progress-bars .progressbar .prog-container .progress .springboot {
-  width: 10%;
+  width: 70%;
 }
 
 .section-title {
@@ -581,7 +431,6 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   padding: 3.5rem 0;
   position: relative;
 }
-
 .section-title::before {
   content: "";
   position: absolute;
@@ -590,17 +439,13 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   top: 0;
   width: 40%;
   height: 1px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 /* download button styling */
 .btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 .download-btn {
@@ -609,55 +454,36 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   font-weight: 600;
   position: relative;
   border: 1px solid var(--color-secondary);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-self: flex-start;
+  align-items: center;
   overflow: hidden;
 }
-
 .download-btn .btn-txt {
   padding: 0 2rem;
 }
-
 .download-btn .btn-icon {
   background-color: var(--color-secondary);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   padding: 1rem;
 }
-
 .download-btn::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: all 0.4s ease-in-out;
+  transform: translateX(100%);
   transition: all 0.4s ease-in-out;
   z-index: -1;
 }
-
 .download-btn:hover::before {
   width: 100%;
   height: 100%;
   background-color: var(--color-secondary);
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: all 0.4s ease-in-out;
+  transform: translateX(0);
   transition: all 0.4s ease-in-out;
 }
 
@@ -665,14 +491,12 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
 .main-title {
   text-align: center;
 }
-
 .main-title h2 {
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
 }
-
 .main-title h2 span {
   color: var(--color-secondary);
 }
@@ -684,18 +508,14 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
 }
 
 .portfolios {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
-
 .portfolios .portfolio-item {
   position: relative;
 }
-
 .portfolios .portfolio-item img {
   width: 100%;
   height: 300px;
@@ -703,7 +523,6 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
      object-fit: contain;
   border-radius: 15px;
 }
-
 .portfolios .portfolio-item .hover-item {
   width: 100%;
   height: 100%;
@@ -713,83 +532,52 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
   top: 0;
   padding: 0.5rem;
   border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all 0.4s ease-in-out;
+  transform: scale(0);
   transition: all 0.4s ease-in-out;
 }
-
 .portfolios .portfolio-item .hover-item h3 {
   font-size: 1.5rem;
   color: var(--color-white);
   margin-bottom: 1.5rem;
 }
-
 .portfolios .portfolio-item .hover-item .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .portfolios .portfolio-item .hover-item .icons .icon {
   background-color: var(--color-primary);
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 0 1rem;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
 .portfolios .portfolio-item .hover-item .icons .icon i {
   font-size: 1.5rem;
   color: var(--color-white);
   margin: 0 1rem;
 }
-
 .portfolios .portfolio-item .hover-item .icons .icon:hover {
   background-color: var(--color-white);
 }
-
 .portfolios .portfolio-item .hover-item .icons .icon:hover i {
   color: var(--color-primary);
 }
 
 .portfolio-item:hover .hover-item {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 /* Experience Styling
@@ -848,9 +636,8 @@ Timeline Styling */
   width: 2px;
   height: 100%;
   margin-left: -1px;
-  background: #d5d5d5;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(213, 213, 213, 0)), color-stop(8%, #d5d5d5), color-stop(92%, #d5d5d5), to(rgba(213, 213, 213, 0)));
-  background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, #d5d5d5 8%, #d5d5d5 92%, rgba(213, 213, 213, 0) 100%);
+  background: rgb(213, 213, 213);
+  background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
   z-index: 5;
 }
 
@@ -952,18 +739,15 @@ Timeline Styling */
   padding: 1em;
   background-color: var(--color-gray-4);
   opacity: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   z-index: 15;
 }
-
 .desc h5 {
+  font-weight: normal !important;
+}
+.desc h6 {
   font-weight: normal !important;
 }
 
@@ -981,138 +765,83 @@ Timeline Styling */
 
 /* Contact Me Styling */
 .contact-content-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 3.5rem;
 }
-
 .contact-content-container .left-contact {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
-
 .contact-content-container .left-contact h4 {
   margin-top: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
 }
-
 .contact-content-container .left-contact p {
   margin: 1rem 0;
   line-height: 2rem;
 }
-
 .contact-content-container .left-contact .contact-info .contact-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .contact-content-container .left-contact .contact-info .contact-item p {
   margin: 0.3rem 0 !important;
   padding: 0 !important;
 }
-
 .contact-content-container .left-contact .contact-info .contact-item .icon {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40px 1fr;
-      grid-template-columns: 40px 1fr;
+  grid-template-columns: 40px 1fr;
 }
-
 .contact-content-container .left-contact .contact-info .contact-item .icon i {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 1.3rem;
 }
-
 .contact-content-container .left-contact .social-icons {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (50px)[2];
-      grid-template-columns: repeat(2, 50px);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  grid-template-columns: repeat(2, 50px);
+  align-items: center;
+  justify-content: space-evenly;
 }
-
 .contact-content-container .left-contact .social-icon {
   margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .contact-content-container .left-contact .social-icon a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: var(--color-white);
   background-color: var(--color-gray-5);
   cursor: pointer;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin: 0;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
 .contact-content-container .left-contact .social-icon a:hover {
   background-color: var(--color-secondary);
 }
-
 .contact-content-container .left-contact .social-icon a:hover i {
   color: var(--color-primary);
 }
-
 .contact-content-container .left-contact .social-icon a i {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-size: 1.3rem;
 }
-
 .contact-content-container .right-contact {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
   margin-left: 3rem;
 }
-
 .contact-content-container .right-contact .input-control {
   margin: 1.5rem;
   margin-left: 0;
   margin-right: 3rem;
 }
-
 .contact-content-container .right-contact .input-control input,
 .contact-content-container .right-contact .input-control textarea {
   border-radius: 30px;
@@ -1127,24 +856,15 @@ Timeline Styling */
   color: var(--color-white);
   resize: none;
 }
-
 .contact-content-container .right-contact .sidebyside {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .contact-content-container .right-contact .sidebyside :last-child {
   margin-left: 0.5rem;
 }
-
 .contact-content-container .right-contact .submit-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 768px) {
@@ -1162,20 +882,16 @@ Timeline Styling */
     text-align: center;
   }
   header .right-header .btn-container {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
   }
   .header-content {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
   .left-header .h-shape {
     display: none;
   }
   .right-header {
-    -ms-grid-row: 1;
     grid-row: 1;
     width: 90%;
     margin: 0 auto;
@@ -1192,14 +908,12 @@ Timeline Styling */
     width: 90%;
   }
   .about-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     padding: 0 !important;
     margin-bottom: 4rem;
   }
   .about-container .right-about {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     padding-top: 2.5rem;
   }
   .about-container .right-about .about-item {
@@ -1207,9 +921,7 @@ Timeline Styling */
   }
   .about-container .right-about .abt-txt {
     width: 0.6;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     text-align: center;
   }
   .about-container .right-about .abt-txt .small-txt {
@@ -1228,18 +940,14 @@ Timeline Styling */
     font-weight: 600;
   }
   .about-container .left-about p {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .about-stats .progress-bars {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
   .portfolios {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
   .timeline {
@@ -1252,10 +960,7 @@ Timeline Styling */
     text-align: left;
   }
   .contact-content-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .contact-content-container .right-contact {
     margin-left: 0;
@@ -1266,15 +971,10 @@ Timeline Styling */
     margin-right: 0;
   }
   .contact-content-container .right-contact .submit-btn {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .contact-content-container .right-contact .sidebyside {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .contact-content-container .right-contact .sidebyside :last-child {
     margin-left: 0;
@@ -1296,16 +996,10 @@ Timeline Styling */
   .controls {
     top: auto;
     bottom: 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: row;
+    justify-content: center;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     width: 100%;
     background-color: var(--color-gray-5);
   }
@@ -1316,15 +1010,13 @@ Timeline Styling */
     margin: 1rem 0.3rem;
   }
 }
-
 @media screen and (min-width: 769px) {
   .about-container {
     padding-right: 50px;
     margin: 0 2%;
   }
   .about-container .right-about {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .about-container .right-about .large-txt {
     font-size: 2rem !important;
@@ -1406,15 +1098,13 @@ Timeline Styling */
     margin: 1em 0 0 0.75em;
   }
   .portfolios {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 3rem;
   }
   header {
     padding: 0 !important;
   }
 }
-
 @media screen and (min-width: 1080px) {
   .right-header {
     padding: 0;
@@ -1423,8 +1113,7 @@ Timeline Styling */
     padding: 2%;
   }
   .about-container .right-about {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .timeline {
     width: 800px;
@@ -1444,9 +1133,7 @@ Timeline Styling */
     text-align: left;
   }
   .portfolios {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 3rem;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

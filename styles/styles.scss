@@ -419,10 +419,10 @@ they stay on top (buttons) setting transform translateY to -50% to align it by c
             width: 90%;
           }
           .java {
-            width: 60%;
+            width: 80%;
           }
           .springboot {
-            width: 10%;
+            width: 70%;
           }
         }
       }
@@ -798,6 +798,9 @@ Timeline Styling */
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   z-index: 15;
   h5 {
+    font-weight: normal !important;
+  }
+  h6 {
     font-weight: normal !important;
   }
 }
